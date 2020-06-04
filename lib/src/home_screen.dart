@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fooddelivery/src/widgets/food_category.dart';
+import 'package:fooddelivery/src/widgets/search_field.dart';
 
 import 'widgets/home_to_info.dart';
 
@@ -19,7 +20,9 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: EdgeInsets.only(top: 40.0,left: 20.0,right: 20.0),
         children: <Widget>[
           HomeTopInfo(),
-          FoodCategory()
+          FoodCategory(),
+          SizedBox(height: 20.0),
+          SearchField(),
         ],
       ),
     );
