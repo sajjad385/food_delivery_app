@@ -27,7 +27,7 @@ class FoodCard extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 16.0,
                   ),),
-                  Text("$numberOfItems Kinds"),
+                  Text("$numberOfItems pcs"),
                 ],
               ),
             ],

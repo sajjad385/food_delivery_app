@@ -4,16 +4,16 @@ import 'package:fooddelivery/src/data/food_data.dart';
 import 'package:fooddelivery/src/widgets/bought_foods.dart';
 import 'package:fooddelivery/src/widgets/food_category.dart';
 import 'package:fooddelivery/src/widgets/search_field.dart';
-import 'models/food_model.dart';
-import 'widgets/home_to_info.dart';
+import '../models/food_model.dart';
+import '../widgets/home_to_info.dart';
 
 
-class HomeScreen extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomePageState extends State<HomePage> {
   List<Food> _foods= foods;
 
   @override
@@ -37,9 +37,9 @@ class _HomeScreenState extends State<HomeScreen> {
               GestureDetector(
                 onTap: (){ },
                 child: Text('View All',style: TextStyle(
-                  fontSize: 18.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.orangeAccent
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.orangeAccent
                 ),),
               )
             ],
