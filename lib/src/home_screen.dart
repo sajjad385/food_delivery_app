@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fooddelivery/src/widgets/bought_foods.dart';
 import 'package:fooddelivery/src/widgets/food_category.dart';
 import 'package:fooddelivery/src/widgets/search_field.dart';
 
@@ -23,6 +24,28 @@ class _HomeScreenState extends State<HomeScreen> {
           FoodCategory(),
           SizedBox(height: 20.0),
           SearchField(),
+          SizedBox(height: 20.0),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Text('Frequently Bought Foods',style: TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+              ),),
+              GestureDetector(
+                onTap: (){ },
+                child: Text('View All',style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.orangeAccent
+                ),),
+              )
+            ],
+          ),
+          SizedBox(height: 20.0),
+          Container(
+            child: BoughtFoods(),
+          ),
         ],
       ),
     );
