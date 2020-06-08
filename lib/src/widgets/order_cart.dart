@@ -63,7 +63,8 @@ class OrderCard extends StatelessWidget {
                   fontWeight: FontWeight.bold
                 ),),
                 SizedBox(height:5.0),
-                Text('30.0',style: TextStyle(
+//                 $ u0024 tk \u09F3
+                Text("\u09F3 30.0",style: TextStyle(
                    color: Colors.orangeAccent,
                   fontSize: 16.0
                 ),),
