@@ -3,7 +3,11 @@ import 'package:fooddelivery/src/pages/favorite_page.dart';
 import 'package:fooddelivery/src/pages/home_page.dart';
 import 'package:fooddelivery/src/pages/order_page.dart';
 import 'package:fooddelivery/src/pages/profile_page.dart';
+import 'package:fooddelivery/src/scoped_model/food_model.dart';
 class MainScreen extends StatefulWidget {
+  final FoodModel foodModel;
+
+  const MainScreen({Key key, this.foodModel}) : super(key: key);
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -20,9 +24,10 @@ class _MainScreenState extends State<MainScreen> {
   ProfilePage profilePage;
   @override
   void initState(){
-
+    //call the fetch method on food
+    widget.foodModel.fetchFoods();
     super.initState();
-    homePage=HomePage();
+    homePage=HomePage(widget.foodModel);
     orderPage =OrderPage();
     favoritePage= FavoritePage();
     profilePage = ProfilePage();
